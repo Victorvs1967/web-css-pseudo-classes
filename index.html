@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Pseudo-classes</title>
+
+  <link rel="stylesheet" href="./css/main.min.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+  <div class="container">
+
+    <div id="start" class="start">
+      <h2>+ > [] ~</h2>
+      <div>
+        <p>div is a direct parent of p | .start div > p</p>
+        <div>
+          <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ul>
+          <p>p is proceded by a ul with same parent | .start div ul ~ p</p>
+        </div>
+        <p>div is direct parent of p | p .start div p</p>
+      </div>
+      <span>span is right after div | .start div + span</span>
+      <div class="form">
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <input type="submit" value="Submit">
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
