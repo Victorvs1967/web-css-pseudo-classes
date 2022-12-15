@@ -14,11 +14,14 @@ html
 body
   font-size: 1.4rem
   line-height: 1.7
+ul,
+li
+  list-style: none
 
 .container
   width: 100%
   padding: 4rem
-  background: #fdcf03
+  background: #faeeb9
 
 
 .start
@@ -36,3 +39,70 @@ body
   & ul ~ p
     background: #f00000
     color: #fff
+  // target attribute
+  & .form
+    margin-top: 1rem
+    input[type]
+      background: #ddd
+    // target specific attribute value
+    input[type="email"]
+      width: 100%
+    
+// focus
+.focus input:focus
+  background: #00aaff
+
+// hover
+.hover
+  & div
+    height: 2rem
+    padding: 0 1rem
+    background: yellowgreen
+  & div:hover
+    height: 4rem
+    color: crimson
+    font-weight: bolder
+
+// active
+.active
+  p
+    padding: 1rem
+    border: 1px solid gray
+  p:active
+    background: yellow
+    font-weight: bolder
+  div
+    padding: 1rem
+    border: 1px solid gray
+  div:active
+    background: #0000ff
+    color: #fff
+
+// child
+.child
+  .odd-even
+    margin: 1rem 0
+    li
+      padding: .5rem 1rem
+      &:nth-child(odd)
+        background: #ccc
+      &:nth-child(even)
+        background: #ddd
+  .position
+    margin: 1rem 0
+    li
+      padding: .5rem 1rem
+      &:first-child
+        background: darksalmon
+      &:last-child
+        background: darksalmon
+      // position 5
+      &:nth-child(5)
+        background: coral
+      // every 3rd
+      &:nth-child(3n + 0)
+        background: orange
+      // every 5rd start from 10
+      &:nth-child(5n + 11)
+        background: yellow
+        
