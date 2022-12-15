@@ -23,86 +23,101 @@ li
   padding: 4rem
   background: #faeeb9
 
-
-.start
-  // if div is a direct parent of p
-  & div > p
-    padding: 1rem
-    background: #0000f0
-    color: #fff
-  // if span is right after div
-  & div + span
-    padding: 1rem
-    background: #333
-    color: #fff
-  // if p is proceded by a ul whith same parent
-  & ul ~ p
-    background: #f00000
-    color: #fff
-  // target attribute
-  & .form
-    margin-top: 1rem
-    input[type]
-      background: #ddd
-    // target specific attribute value
-    input[type="email"]
-      width: 100%
-    
-// focus
-.focus input:focus
-  background: #00aaff
-
-// hover
-.hover
-  & div
-    height: 2rem
-    padding: 0 1rem
-    background: yellowgreen
-  & div:hover
-    height: 4rem
-    color: crimson
-    font-weight: bolder
-
-// active
-.active
-  p
-    padding: 1rem
-    border: 1px solid gray
-  p:active
-    background: yellow
-    font-weight: bolder
-  div
-    padding: 1rem
-    border: 1px solid gray
-  div:active
-    background: #0000ff
-    color: #fff
-
-// child
-.child
-  .odd-even
-    margin: 1rem 0
-    li
-      padding: .5rem 1rem
-      &:nth-child(odd)
-        background: #ccc
-      &:nth-child(even)
+  .start
+    // if div is a direct parent of p
+    & div > p
+      padding: 1rem
+      background: #0000f0
+      color: #fff
+    // if span is right after div
+    & div + span
+      padding: 1rem
+      background: #333
+      color: #fff
+    // if p is proceded by a ul whith same parent
+    & ul ~ p
+      background: #f00000
+      color: #fff
+    // target attribute
+    & .form
+      margin-top: 1rem
+      input[type]
         background: #ddd
-  .position
-    margin: 1rem 0
-    li
-      padding: .5rem 1rem
-      &:first-child
-        background: darksalmon
-      &:last-child
-        background: darksalmon
-      // position 5
-      &:nth-child(5)
-        background: coral
-      // every 3rd
-      &:nth-child(3n + 0)
-        background: orange
-      // every 5rd start from 10
-      &:nth-child(5n + 11)
-        background: yellow
-        
+      // target specific attribute value
+      input[type="email"]
+        width: 100%
+      
+  // focus
+  .focus input:focus
+    background: #00aaff
+
+  // hover
+  .hover
+    & div
+      height: 2rem
+      padding: 0 1rem
+      background: yellowgreen
+    & div:hover
+      height: 4rem
+      color: crimson
+      font-weight: bolder
+
+  // active
+  .active
+    p
+      padding: 1rem
+      border: 1px solid gray
+    p:active
+      background: yellow
+      font-weight: bolder
+    div
+      padding: 1rem
+      border: 1px solid gray
+    div:active
+      background: #0000ff
+      color: #fff
+
+  // child
+  .child
+    margin-top: 2rem
+    .odd-even
+      margin: 1rem 0
+      li
+        padding: .5rem 1rem
+        &:nth-child(odd)
+          background: #ccc
+        &:nth-child(even)
+          background: #ddd
+    .position
+      margin: 1rem 0
+      li
+        padding: .5rem 1rem
+        &:first-child
+          background: darksalmon
+        &:last-child
+          background: darksalmon
+        // position 5
+        &:nth-child(5)
+          background: coral
+        // every 3rd
+        &:nth-child(3n + 0)
+          background: orange
+        // every 5rd start from 10
+        &:nth-child(5n + 11)
+          background: yellow
+
+  // is
+  .is :is(div)
+    color: brown
+    font-weight: bolder
+
+  // has
+  .has
+    .tag ul:has(li)
+      color: brown
+      font-weight: bolder
+    .my-class:has(.has-class)
+      background: darkslategray
+      color: #fff
+    .list li:has(p, span)
+      color: blueviolet

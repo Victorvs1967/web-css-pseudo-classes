@@ -31,93 +31,106 @@ li {
   padding: 4rem;
   background: #faeeb9;
 }
-
-.start div > p {
+.container .start div > p {
   padding: 1rem;
   background: #0000f0;
   color: #fff;
 }
-.start div + span {
+.container .start div + span {
   padding: 1rem;
   background: #333;
   color: #fff;
 }
-.start ul ~ p {
+.container .start ul ~ p {
   background: #f00000;
   color: #fff;
 }
-.start .form {
+.container .start .form {
   margin-top: 1rem;
 }
-.start .form input[type] {
+.container .start .form input[type] {
   background: #ddd;
 }
-.start .form input[type=email] {
+.container .start .form input[type=email] {
   width: 100%;
 }
-
-.focus input:focus {
+.container .focus input:focus {
   background: #00aaff;
 }
-
-.hover div {
+.container .hover div {
   height: 2rem;
   padding: 0 1rem;
   background: yellowgreen;
 }
-.hover div:hover {
+.container .hover div:hover {
   height: 4rem;
   color: crimson;
   font-weight: bolder;
 }
-
-.active p {
+.container .active p {
   padding: 1rem;
   border: 1px solid gray;
 }
-.active p:active {
+.container .active p:active {
   background: yellow;
   font-weight: bolder;
 }
-.active div {
+.container .active div {
   padding: 1rem;
   border: 1px solid gray;
 }
-.active div:active {
+.container .active div:active {
   background: #0000ff;
   color: #fff;
 }
-
-.child .odd-even {
+.container .child {
+  margin-top: 2rem;
+}
+.container .child .odd-even {
   margin: 1rem 0;
 }
-.child .odd-even li {
+.container .child .odd-even li {
   padding: 0.5rem 1rem;
 }
-.child .odd-even li:nth-child(odd) {
+.container .child .odd-even li:nth-child(odd) {
   background: #ccc;
 }
-.child .odd-even li:nth-child(even) {
+.container .child .odd-even li:nth-child(even) {
   background: #ddd;
 }
-.child .position {
+.container .child .position {
   margin: 1rem 0;
 }
-.child .position li {
+.container .child .position li {
   padding: 0.5rem 1rem;
 }
-.child .position li:first-child {
+.container .child .position li:first-child {
   background: darksalmon;
 }
-.child .position li:last-child {
+.container .child .position li:last-child {
   background: darksalmon;
 }
-.child .position li:nth-child(5) {
+.container .child .position li:nth-child(5) {
   background: coral;
 }
-.child .position li:nth-child(3n+0) {
+.container .child .position li:nth-child(3n+0) {
   background: orange;
 }
-.child .position li:nth-child(5n+11) {
+.container .child .position li:nth-child(5n+11) {
   background: yellow;
+}
+.container .is :is(div) {
+  color: brown;
+  font-weight: bolder;
+}
+.container .has .tag ul:has(li) {
+  color: brown;
+  font-weight: bolder;
+}
+.container .has .my-class:has(.has-class) {
+  background: darkslategray;
+  color: #fff;
+}
+.container .has .list li:has(p, span) {
+  color: blueviolet;
 }/*# sourceMappingURL=main.css.map */
