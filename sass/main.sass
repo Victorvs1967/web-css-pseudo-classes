@@ -121,3 +121,23 @@ li
       color: #fff
     .list li:has(p, span)
       color: blueviolet
+
+  // not
+  .not
+    & ul li:not(.other)
+      color: purple
+      font-weight: bolder
+    & div :not(div)
+      background: darkslategray
+      color: #fff
+
+  // before after
+  .before-after
+    & .before .required::before
+      content: 'content in css'
+      color: red
+      padding-right: 2px
+    & .after .required::after
+      content: '*'
+      color: red
+      padding-right: 2px

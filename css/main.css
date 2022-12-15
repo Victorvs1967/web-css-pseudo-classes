@@ -133,4 +133,22 @@ li {
 }
 .container .has .list li:has(p, span) {
   color: blueviolet;
+}
+.container .not ul li:not(.other) {
+  color: purple;
+  font-weight: bolder;
+}
+.container .not div :not(div) {
+  background: darkslategray;
+  color: #fff;
+}
+.container .before-after .before .required::before {
+  content: "content in css";
+  color: red;
+  padding-right: 2px;
+}
+.container .before-after .after .required::after {
+  content: "*";
+  color: red;
+  padding-right: 2px;
 }/*# sourceMappingURL=main.css.map */
